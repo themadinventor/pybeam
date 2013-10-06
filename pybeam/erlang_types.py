@@ -65,7 +65,7 @@ class Binary:
 	def __eq__(self, other):
 		return self.value == other.value
 	def __repr__(self):
-		return "<<%s>>" % self.value
+		return "<<"+','.join(map(lambda x: str(ord(x)), self.value))+">>"
 
 class Fun:
 	def __init__(self, arity, uniq, index, module, oldindex, olduniq, pid, free):
